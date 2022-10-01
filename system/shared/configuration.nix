@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ (import ./desktop/gnome.nix { pkgs = pkgs; }) ];
+
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     firefox
@@ -35,17 +37,6 @@
     LC_TELEPHONE = "en_DK.utf8";
     LC_TIME = "en_DK.utf8";
   };
-
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.libinput.enable = true;
-  services.xserver = {
-    layout = "es";
-    xkbVariant = "";
-    xkbOptions = "caps:escape";
-  };
-  console.keyMap = "es";
 
   services.printing.enable = true;
 

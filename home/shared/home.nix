@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./programs/zsh.nix ./programs/git.nix ];
+  imports = [ ./desktop/gnome.nix ./programs/zsh.nix ./programs/git.nix ];
 
   home.packages = with pkgs; [ ripgrep wget unzip zip ];
   home.stateVersion = "22.05";
