@@ -2,7 +2,8 @@
 
 {
   environment.systemPackages = [
-    neovim
     firefox
+    git
+    neovim
   ];
 }

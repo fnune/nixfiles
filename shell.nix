@@ -1,11 +1,14 @@
 let
   sources = import ./nix/sources.nix;
   nixpkgs = import sources.nixpkgs { config.allowUnfree = true; };
+  home-manager = import sources.home-manager { };
 in
 nixpkgs.mkShell {
-  nativeBuildInputs = [
-    nixpkgs.niv
-  ];
-  NIX_PATH =
-    "nixpkgs=${sources.nixpkgs}:nixos-config=/etc/nixos/configuration.nix";
+  nativeBuildInputs = with nixpkgs; [ niv ];
+  NIX_PATH = ""
+    + "nixpkgs=${sources.nixpkgs}:"
+    + "home-manager=${sources.home-manager}:"
+    + "nixos-config=/etc/nixos/configuration.nix"
+  ;
 }
+
