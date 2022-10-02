@@ -25,6 +25,11 @@
       size = 100000;
       path = "${config.home.homeDirectory}/.zsh_history";
     };
+    initExtra = ''
+      for file in ~/.zsh/includes/*; do
+        source "$file"
+      done
+    '';
     envExtra = ''
       PROMPT=$' %{\033[3m%}%(5~|…/%3~|%~)%{\033[0m%} %(?.%{$fg[green]%}.%{$fg[red]%}[%?] )=>%{$reset_color%} '
 

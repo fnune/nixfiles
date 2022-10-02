@@ -28,5 +28,7 @@ mv $HOME/.config/nixpkgs $CONFIG_NIXPKGS_BAK
 mkdir --parents $HOME/.config/nixpkgs
 ln -s $(readlink -f ./home/machine/$MACHINE/home.nix) $HOME/.config/nixpkgs/home.nix
 
+mkdir --parents $HOME/.zsh/includes
+
 nix-shell --run "nix-shell '<home-manager>' -A install"
 nix-shell --run "sudo --preserve-env nixos-rebuild switch"
