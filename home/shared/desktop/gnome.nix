@@ -90,7 +90,7 @@
       "move-to-side-s" = [ "<Super><Shift>J" ];
       "move-to-side-n" = [ "<Super><Shift>K" ];
       "move-to-side-e" = [ "<Super><Shift>L" ];
-      
+
       "move-to-monitor-left" = [ "<Ctrl><Shift>H" ];
       "move-to-monitor-down" = [ "<Ctrl><Shift>J" ];
       "move-to-monitor-up" = [ "<Ctrl><Shift>K" ];
