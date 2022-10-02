@@ -19,6 +19,7 @@
       la = "ls -la";
       sudo = "sudo ";
       vim = "nvim";
+      vi = "nvim";
     };
     history = {
       size = 100000;

@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./desktop/gnome.nix (import ./programs/zsh.nix { pkgs = pkgs; config = config; }) ./programs/git.nix (import ./programs/alacritty.nix { config = config; }) ];
+  imports = [ ./desktop/gnome.nix (import ./programs/zsh.nix { pkgs = pkgs; config = config; }) ./programs/git.nix (import ./programs/alacritty.nix { config = config; }) (import ./programs/neovim.nix { config = config; pkgs = pkgs; }) ];
 
   home.packages = with pkgs; [ ripgrep wget unzip zip ];
   home.stateVersion = "22.05";
