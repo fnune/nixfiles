@@ -18,6 +18,7 @@
     shellAliases = {
       la = "ls -la";
       sudo = "sudo ";
+      vim = "nvim";
     };
     history = {
       size = 100000;

@@ -21,7 +21,6 @@
     gedit
     gnome-characters
     gnome-music
-    gnome-terminal # Remove later
     hitori
     iagno
     tali
