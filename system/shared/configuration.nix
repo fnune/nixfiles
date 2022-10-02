@@ -13,8 +13,10 @@
 
   system.stateVersion = "22.05";
 
+  virtualisation.docker.enable = true;
+
   users.users.fausto.isNormalUser = true;
-  users.users.fausto.extraGroups = [ "wheel" ];
+  users.users.fausto.extraGroups = [ "wheel" "docker" ];
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
 
@@ -23,6 +25,10 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.networkmanager.enable = true;
+  networking.extraHosts = ''
+    127.0.0.1 minio
+    127.0.0.1 rabbitmq
+  '';
 
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.utf8";
