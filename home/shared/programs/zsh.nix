@@ -11,7 +11,7 @@
           owner = "jeffreytse";
           repo = "zsh-vi-mode";
           rev = "v0.8.5";
-	  sha256 = "sha256-EOYqHh0rcgoi26eopm6FTl81ehak5kXMmzNcnJDH8/E=";
+          sha256 = "sha256-EOYqHh0rcgoi26eopm6FTl81ehak5kXMmzNcnJDH8/E=";
         };
       }
     ];
@@ -46,13 +46,13 @@
           echo "Not a git project"
         fi
       }
-      
+
       function untilfail() {
         while "$@"; do :; done
       }
     '';
   };
-  
+
   home.packages = [ pkgs.bfs ];
   programs.fzf = {
     enable = true;
