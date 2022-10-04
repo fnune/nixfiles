@@ -8,6 +8,7 @@
     firefox
     git
     neovim
+    slack
     wget
   ];
 
